@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javax.xml.bind.JAXBContext;
-
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
