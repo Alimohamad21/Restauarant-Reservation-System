@@ -1,14 +1,24 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import java.io.File;
+
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 
 public class LoginscreenController{
     @FXML
@@ -72,6 +82,18 @@ public class LoginscreenController{
                if (fUser.getUsername().equalsIgnoreCase(username.getText()) && fUser.getPassword().equals(password.getText())) {
                    if (mode.equals("customer") && fUser.getRole().equalsIgnoreCase("client")) {
                        flag = false;
+                       try {
+                           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("tablescreen.fxml"));
+                           Parent root1 = (Parent) fxmlLoader.load();
+                           TableScreenController scene2 = fxmlLoader.getController();
+                           scene2.setHelloname(fUser.getName());
+                           Scene scene = new Scene(root1);
+                           Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
+                           stage.setScene(scene);
+                           stage.show();
+                       }catch (Exception e){
+                           verify.setText("Error opening scene");
+                       }
                    } else if (mode.equals("waiter") && fUser.getRole().equalsIgnoreCase("waiter")) {
                        flag = false;
                    } else if (mode.equals("cook") && fUser.getRole().equalsIgnoreCase("cooker")) {

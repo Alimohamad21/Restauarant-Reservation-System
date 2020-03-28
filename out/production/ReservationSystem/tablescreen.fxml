@@ -4,73 +4,78 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="479.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableScreenController">
+<AnchorPane prefHeight="515.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableScreenController">
    <children>
-      <Button layoutX="72.0" layoutY="109.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="89.0" text="1">
+      <Button layoutX="72.0" layoutY="158.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="89.0" text="1">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font></Button>
-      <Button layoutX="79.0" layoutY="291.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="76.0" text="4">
+      <Button layoutX="79.0" layoutY="323.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="76.0" text="4">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="18.0" layoutY="197.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" text="2">
+      <Button layoutX="18.0" layoutY="234.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" text="2">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="383.0" layoutY="266.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="157.0" text="6">
+      <Button layoutX="387.0" layoutY="282.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="157.0" text="6">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="411.0" layoutY="348.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="117.0" text="7">
+      <Button layoutX="411.0" layoutY="356.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="117.0" text="7">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="48.0" layoutY="49.0" prefHeight="35.0" prefWidth="232.0" text="(non-smoking area)">
+      <Label layoutX="45.0" layoutY="93.0" prefHeight="35.0" prefWidth="232.0" text="(non-smoking area)">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="93.0" layoutY="145.0" prefHeight="17.0" prefWidth="68.0" text="5 persons" />
-      <Label layoutX="83.0" layoutY="237.0" prefHeight="17.0" prefWidth="68.0" text="12 persons" />
-      <Label layoutX="20.0" layoutY="14.0" prefHeight="35.0" prefWidth="269.0" text="Please choose a table:">
+      <Label layoutX="93.0" layoutY="197.0" prefHeight="17.0" prefWidth="68.0" text="5 persons" />
+      <Label layoutX="83.0" layoutY="277.0" prefHeight="17.0" prefWidth="68.0" text="12 persons" />
+      <Label layoutX="13.0" layoutY="57.0" prefHeight="35.0" prefWidth="269.0" text="Please choose a table:">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="386.0" layoutY="49.0" prefHeight="35.0" prefWidth="232.0" text="(smoking area)">
+      <Label layoutX="401.0" layoutY="93.0" prefHeight="35.0" prefWidth="232.0" text="(smoking area)">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="93.0" layoutY="330.0" prefHeight="17.0" prefWidth="68.0" text="4 persons" />
-      <Button layoutX="363.0" layoutY="91.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" text="3">
+      <Label layoutX="93.0" layoutY="364.0" prefHeight="17.0" prefWidth="68.0" text="4 persons" />
+      <Button layoutX="367.0" layoutY="141.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="198.0" text="3">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="428.0" layoutY="132.0" prefHeight="17.0" prefWidth="68.0" text="12 persons" />
-      <Button layoutX="428.0" layoutY="190.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="76.0" text="5">
+      <Label layoutX="428.0" layoutY="181.0" prefHeight="17.0" prefWidth="68.0" text="12 persons" />
+      <Button layoutX="424.0" layoutY="214.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="76.0" text="5">
          <font>
             <Font name="Bodoni MT Black" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="436.0" layoutY="229.0" prefHeight="17.0" prefWidth="68.0" text="4 persons" />
-      <Label layoutX="436.0" layoutY="302.0" prefHeight="17.0" prefWidth="68.0" text="7 persons" />
-      <Label layoutX="16.0" layoutY="393.0" prefHeight="35.0" prefWidth="296.0" text="*Red tables are not available for reservation" textFill="#f30b0b">
+      <Label layoutX="436.0" layoutY="249.0" prefHeight="17.0" prefWidth="68.0" text="4 persons" />
+      <Label layoutX="436.0" layoutY="314.0" prefHeight="17.0" prefWidth="68.0" text="7 persons" />
+      <Label layoutX="13.0" layoutY="410.0" prefHeight="35.0" prefWidth="296.0" text="*Red tables are not available for reservation" textFill="#f30b0b">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="436.0" layoutY="373.0" prefHeight="24.0" prefWidth="68.0" text="6 persons" />
-      <Button layoutX="526.0" layoutY="428.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" text="continue">
+      <Label layoutX="436.0" layoutY="381.0" prefHeight="24.0" prefWidth="68.0" text="6 persons" />
+      <Button layoutX="528.0" layoutY="445.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="117.0" text="continue">
          <font>
             <Font name="Bauhaus 93" size="19.0" />
          </font>
       </Button>
+      <Label fx:id="helloname" layoutX="130.0" layoutY="14.0" prefHeight="35.0" prefWidth="442.0" textFill="#0300cf">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
