@@ -10,15 +10,11 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import java.io.File;
-
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Node;
 
 public class LoginscreenController{
     @FXML
@@ -88,11 +84,12 @@ public class LoginscreenController{
                            TableScreenController scene2 = fxmlLoader.getController();
                            scene2.setHelloname(fUser.getName());
                            Scene scene = new Scene(root1);
-                           Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
+                           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                            stage.setScene(scene);
                            stage.show();
-                       }catch (Exception e){
+                       } catch (Exception e) {
                            verify.setText("Error opening scene");
+
                        }
                    } else if (mode.equals("waiter") && fUser.getRole().equalsIgnoreCase("waiter")) {
                        flag = false;
