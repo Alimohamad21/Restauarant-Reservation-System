@@ -38,7 +38,6 @@ public abstract class Restaurant {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
 
-
             return buffer;
         }
     }
