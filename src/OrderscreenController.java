@@ -182,4 +182,9 @@ public class OrderscreenController implements Initializable {
         GUIfunctions guifunction=new GUIfunctions();
         guifunction.switchScene(event,"tablescreen.fxml");
     }
+    public void nextscreen(ActionEvent event)
+    {
+        GUIfunctions guifunction=new GUIfunctions();
+        guifunction.switchScene(event,"orderinfoscreen.fxml");
+    }
 }

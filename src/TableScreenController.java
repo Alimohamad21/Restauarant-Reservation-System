@@ -185,6 +185,7 @@ public class TableScreenController implements Initializable {
         table5.setDisable(true);
         table6.setDisable(false);
         table7.setDisable(true);
+        table8.setDisable(true);
 
     }
     public void reserveTable7(){

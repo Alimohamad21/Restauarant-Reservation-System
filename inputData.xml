@@ -75,6 +75,21 @@
             <type>main_course</type>
         </dish>
         <dish>
+            <name>Wiwi</name>
+            <price>375</price>
+            <type>main_course</type>
+        </dish>
+        <dish>
+            <name>Ugly Chicken</name>
+            <price>875</price>
+            <type>main_course</type>
+        </dish>
+        <dish>
+            <name>Fried Chicken</name>
+            <price>175</price>
+            <type>main_course</type>
+        </dish>
+        <dish>
             <name>Greek Salade</name>
             <price>35</price>
             <type>appetizer</type>

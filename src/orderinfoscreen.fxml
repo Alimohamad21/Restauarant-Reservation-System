@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OrderinfoscreenController">
+   <children>
+      <Button fx:id="logout" layoutX="408.0" layoutY="335.0" mnemonicParsing="false" onAction="#loggedout" prefHeight="44.0" prefWidth="80.0" text="log out">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="509.0" layoutY="335.0" mnemonicParsing="false" onAction="#quit" prefHeight="44.0" prefWidth="68.0" text="Exit">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="31.0" layoutY="335.0" mnemonicParsing="false" onAction="#goback" prefHeight="44.0" prefWidth="80.0" text="back">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="133.0" layoutY="281.0" prefHeight="44.0" prefWidth="333.0" text="Thanks for making your order" textFill="#12e563">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="21.0" prefHeight="17.0" prefWidth="172.0" text="Your order:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="223.0" prefHeight="17.0" prefWidth="172.0" text="Total price:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="56.0" prefHeight="167.0" prefWidth="348.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="232.0" prefHeight="25.0" prefWidth="112.0" />
+   </children>
+</AnchorPane>
