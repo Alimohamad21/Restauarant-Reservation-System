@@ -16,6 +16,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class TableScreenController implements Initializable {
@@ -39,71 +41,50 @@ public class TableScreenController implements Initializable {
     @FXML Button back;
     @FXML Label helloname;
     @FXML AnchorPane main;
+    List<Button> nonSmokingTables=new ArrayList<Button>();
+    List<Button> smokingTables=new ArrayList<Button>();
+    List<Label> noOfPersons=new ArrayList<Label>();
+    List<Label> snoOfPersons=new ArrayList<Label>();
+    List<Integer> flags=new ArrayList<Integer>();
+
 
     public TableScreenController() throws JAXBException {
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        /*BackgroundImage myBI= new BackgroundImage(new Image("https://previews.123rf.com/images/titco/titco1907/titco190700044/126811150-wooden-parquet-background-light-wood-floor-texture.jpg",699,1000,false,true),
-                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-                BackgroundSize.DEFAULT);
-        main.setBackground(new Background(myBI));*/
-        int smokingtablescounter=1;
-        int tablescounter=1;
-        for(FTable fTable : fRestaurant.getFTables().getFTables()) {
+   @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {int i;
+       nonSmokingTables.add(table1);
+       nonSmokingTables.add(table2);
+       nonSmokingTables.add(table3);
+       nonSmokingTables.add(table4);
+       smokingTables.add(table5);
+       smokingTables.add(table6);
+       smokingTables.add(table7);
+       smokingTables.add(table8);
+       noOfPersons.add(table1persons);
+       noOfPersons.add(table2persons);
+       noOfPersons.add(table3persons);
+       noOfPersons.add(table4persons);
+       snoOfPersons.add(table5persons);
+       snoOfPersons.add(table6persons);
+       snoOfPersons.add(table7persons);
+       snoOfPersons.add(table8persons);
+        int smokingtablescounter=0;
+        int tablescounter=0;
+        for(FTable fTable : fRestaurant.getFTables().getFTables()){
             if (fTable.isSmoking()) {
-                if(smokingtablescounter==1) {
-                    table5.setText(Integer.toString(fTable.getNumber()));
-                    table5persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table5.setVisible(true);
-                }
-              else  if(smokingtablescounter==2) {
-                    table6.setText(Integer.toString(fTable.getNumber()));
-                    table6persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table6.setVisible(true);
-                }
-               else if(smokingtablescounter==3) {
-                    table7.setText(Integer.toString(fTable.getNumber()));
-                    table7persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table7.setVisible(true);
-                }
-                else if(smokingtablescounter==4) {
-                    table8.setText(Integer.toString(fTable.getNumber()));
-                    table8persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table8.setVisible(true);
-                }
+                smokingTables.get(smokingtablescounter).setText(Integer.toString(fTable.getNumber()));
+                snoOfPersons.get(smokingtablescounter).setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
+                smokingTables.get(smokingtablescounter).setVisible(true);
                 smokingtablescounter++;
                 }
-        else if (!fTable.isSmoking()) {
-                if (tablescounter == 1) {
-                    table1.setText(Integer.toString(fTable.getNumber()));
-                    table1persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table1.setVisible(true);
-                } else if (tablescounter == 2) {
-                    table2.setText(Integer.toString(fTable.getNumber()));
-                    table2persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table2.setVisible(true);
-                } else if (tablescounter == 3) {
-                    table3.setText(Integer.toString(fTable.getNumber()));
-                    table3persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table3.setVisible(true);
-                } else if (tablescounter == 4) {
-                    table4.setText(Integer.toString(fTable.getNumber()));
-                    table4persons.setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
-                    table4.setVisible(true);
-                }
-                    tablescounter++;
+         if (!fTable.isSmoking()) {
+             nonSmokingTables.get(tablescounter).setText(Integer.toString(fTable.getNumber()));
+             noOfPersons.get(tablescounter).setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
+             nonSmokingTables.get(tablescounter).setVisible(true);
+             tablescounter++;
                 }
             }
-
-
-        /*for (FTable fTable : fSavedRestaurant.getFTables().getFTables()) {
-            if (fTable.getNumber() == 7) {
-                //table7.setStyle("-fx-background-color:#ff0000;");
-                table7.setDisable(true);
-
-        }*/
     }
     JAXBContext jaxbContext= JAXBContext.newInstance(FRestaurant.class);
     Unmarshaller unmarshaller=jaxbContext.createUnmarshaller();
@@ -113,112 +94,104 @@ public class TableScreenController implements Initializable {
         helloname.setText("Welcome back Mr."+name);
     }
     public void reserveTable1() {
+        int i;
+  for(i=0;i<smokingTables.size();i++) {
+      smokingTables.get(i).setDisable(true);
+  }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            if(i!=0)nonSmokingTables.get(i).setDisable(true);
+        }
 
-        table1.setDisable(false);
-        table2.setDisable(true);
-        table3.setDisable(true);
-        table4.setDisable(true);
-        table5.setDisable(true);
-        table6.setDisable(true);
-        table7.setDisable(true);
-        table8.setDisable(true);
     }
 
     public void reserveTable2(){
 
-        table1.setDisable(true);
-        table2.setDisable(false);
-        table3.setDisable(true);
-        table4.setDisable(true);
-        table5.setDisable(true);
-        table6.setDisable(true);
-        table7.setDisable(true);
-        table8.setDisable(true);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            if(i!=1)nonSmokingTables.get(i).setDisable(true);
+        }
 
 
     }
     public void reserveTable3(){
 
-        table1.setDisable(true);
-        table2.setDisable(true);
-        table3.setDisable(false);
-        table4.setDisable(true);
-        table5.setDisable(true);
-        table6.setDisable(true);
-        table7.setDisable(true);
-        table8.setDisable(true);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            if(i!=2)nonSmokingTables.get(i).setDisable(true);
+        }
 
 
     }
     public void reserveTable4(){
 
-        table1.setDisable(true);
-        table2.setDisable(true);
-        table3.setDisable(true);
-        table4.setDisable(false);
-        table5.setDisable(true);
-        table6.setDisable(true);
-        table7.setDisable(true);
-        table8.setDisable(true);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            if(i!=3)nonSmokingTables.get(i).setDisable(true);
+        }
 
 
     }
     public void reserveTable5(){
 
-        table1.setDisable(true);
-        table2.setDisable(true);
-        table3.setDisable(true);
-        table4.setDisable(true);
-        table5.setDisable(false);
-        table6.setDisable(true);
-        table7.setDisable(true);
-        table8.setDisable(true);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            if(i!=0)smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            nonSmokingTables.get(i).setDisable(true);
+        }
+
 
 
     }
     public void reserveTable6(){
 
-        table1.setDisable(true);
-        table2.setDisable(true);
-        table3.setDisable(true);
-        table4.setDisable(true);
-        table5.setDisable(true);
-        table6.setDisable(false);
-        table7.setDisable(true);
-        table8.setDisable(true);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            if(i!=1)smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            nonSmokingTables.get(i).setDisable(true);
+        }
 
     }
     public void reserveTable7(){
-        table1.setDisable(true);
-        table2.setDisable(true);
-        table3.setDisable(true);
-        table4.setDisable(true);
-        table5.setDisable(true);
-        table6.setDisable(true);
-        table7.setDisable(false);
-        table8.setDisable(true);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            if(i!=2)smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            nonSmokingTables.get(i).setDisable(true);
+        }
     }
     public void reserveTable8(){
 
-        table1.setDisable(true);
-        table2.setDisable(true);
-        table3.setDisable(true);
-        table4.setDisable(true);
-        table5.setDisable(true);
-        table6.setDisable(true);
-        table7.setDisable(true);
-        table8.setDisable(false);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            if(i!=3)smokingTables.get(i).setDisable(true);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            nonSmokingTables.get(i).setDisable(true);
+        }
     }
     public void unselect()
     {
-        table1.setDisable(false);
-        table2.setDisable(false);
-        table3.setDisable(false);
-        table4.setDisable(false);
-        table5.setDisable(false);
-        table6.setDisable(false);
-        table7.setDisable(false);
-        table8.setDisable(false);
+        int i;
+        for(i=0;i<smokingTables.size();i++) {
+            smokingTables.get(i).setDisable(false);
+        }
+        for(i=0;i<nonSmokingTables.size();i++) {
+            nonSmokingTables.get(i).setDisable(false);
+        }
     }
     public void goback(ActionEvent event)
     {

@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -89,7 +88,6 @@ public class LoginscreenController{
                            stage.show();
                        } catch (Exception e) {
                            verify.setText("Error opening scene");
-
                        }
                    } else if (mode.equals("waiter") && fUser.getRole().equalsIgnoreCase("waiter")) {
                        flag = false;

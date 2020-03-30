@@ -58,8 +58,8 @@ public class Main {
         savedFRestaurant.setFDishes(fDishes);
         marshaller.marshal(savedFRestaurant,new File("saveData.xml"));
         System.out.println();
-        Restaurant.Waiter waiter=new Restaurant.Waiter();
+        /*Restaurant.Waiter waiter=new Restaurant.Waiter();
         System.out.println("here");
-        System.out.println(waiter.viewOrders());
+        System.out.println(waiter.viewOrders());*/
     }
 }

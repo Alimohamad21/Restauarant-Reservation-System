@@ -5,23 +5,24 @@ import java.io.File;
 
 public abstract class Restaurant {
     public double dayIncome = 0;
-
-
-    public static abstract class User {
+    static abstract class User {
         private String name;
-        private String username;
         private String role;
-        private String password;
-
-        abstract String viewOrders() throws JAXBException;
+        abstract String viewOrders() ;
+        JAXBContext jaxbContext = JAXBContext.newInstance(FRestaurant.class);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("savedData.xml"));
+        protected User() throws JAXBException {
+        }
     }
 
+
     public class Manager extends User {
-        String viewOrders() throws JAXBException {
+        protected Manager() throws JAXBException {
+        }
+
+        String viewOrders()  {
             String buffer = "";
-            JAXBContext jaxbContext = JAXBContext.newInstance(FRestaurant.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
 
             return buffer;
         }
@@ -32,22 +33,24 @@ public abstract class Restaurant {
     }
 
     public class Chef extends User {
-        String viewOrders() throws JAXBException {
+        protected Chef() throws JAXBException {
+        }
+
+        String viewOrders() {
             String buffer = "";
-            JAXBContext jaxbContext = JAXBContext.newInstance(FRestaurant.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
+
 
             return buffer;
         }
     }
 
-    public static class Waiter extends User {
-        String viewOrders() throws JAXBException {
+    public class Waiter extends User {
+        protected Waiter() throws JAXBException {
+        }
+
+        String viewOrders() {
             String buffer = "";
-            JAXBContext jaxbContext = JAXBContext.newInstance(FRestaurant.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
+
             for (FUser fUser : fRestaurant.getFUsers().getFUsers()){
                 if(fUser.getRole().equals("Client"))
                     buffer+="Name:" + fUser.getName() + "\n";
@@ -61,6 +64,9 @@ public abstract class Restaurant {
     }
 
         public class Customer extends User {
+            protected Customer() throws JAXBException {
+            }
+
             String viewOrders() {
                 String buffer = "";
 
