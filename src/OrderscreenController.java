@@ -94,6 +94,10 @@ public class OrderscreenController implements Initializable {
     Label dessert3price;
     @FXML
     Spinner<Integer> dessert3spinner;
+    @FXML
+    Label namefakelabel;
+    @FXML
+    Label tablenofakelabel;
     private int maindishescounter = 0;
     private int appetizerscounter = 0;
     private int dessertcounter = 0;
@@ -185,6 +189,15 @@ public class OrderscreenController implements Initializable {
         }
 
     }
+    public void setNamefakelabel(String name)
+    {
+      namefakelabel.setText(name);
+    }
+
+    public void setTablenofakelabel(String tablenumber)
+    {
+      tablenofakelabel.setText(tablenumber);
+    }
 
 
     public void goback(ActionEvent event) {
@@ -199,25 +212,27 @@ public class OrderscreenController implements Initializable {
         for (FDish fDish : fRestaurant.getFDishes().getFDishes()) {
             if (fDish.getType().equalsIgnoreCase("main_course")) {
                 order.calculateDishPrice(fDish, mainDishSpinners.get(i).getValue());
-                order.addToViewedOrder(fDish,mainDishSpinners.get(i).getValue());
+                order.addToOrder(fDish,mainDishSpinners.get(i).getValue());
                 i++;
             } else if (fDish.getType().equalsIgnoreCase("appetizer")) {
                 order.calculateDishPrice(fDish, appetizerSpinners.get(j).getValue());
-                order.addToViewedOrder(fDish, appetizerSpinners.get(j).getValue());
+                order.addToOrder(fDish, appetizerSpinners.get(j).getValue());
                 j++;
             } else if (fDish.getType().equalsIgnoreCase("desert")) {
                 order.calculateDishPrice(fDish, dessertSpinners.get(k).getValue());
-                order.addToViewedOrder(fDish, dessertSpinners.get(k).getValue());
+                order.addToOrder(fDish, dessertSpinners.get(k).getValue());
                 k++;
             }
         }
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("orderinfoscreen.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
-                OrderinfoscreenController scene2 = fxmlLoader.getController();
+                OrderinfoscreenController scene2=fxmlLoader.getController();
                 scene2.printTotalprice(Double.toString(order.getTotalPrice()),order.getCustomerOrder());
-                Scene scene = new Scene(root1);
+                Customer customer=new Customer();
+                customer.makeReservation(namefakelabel.getText(),Integer.parseInt(tablenofakelabel.getText()),order.getCustomerOrder(),order.getTotalPrice());
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root1);
                 stage.setScene(scene);
                 stage.show();
             } catch (Exception e) {

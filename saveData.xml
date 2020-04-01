@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><restaurant><users><user><name>khaled gamal</name><role>customer</role><username>khaled00gamal</username><password>12345678</password></user></users><tables><table><number>7</number><number_of_seats>2</number_of_seats><smoking>false</smoking></table></tables><dishes><dish><name>fried chicken</name><type>main course</type><price>65.0</price></dish></dishes></restaurant>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name>John Doe</name><table>1</table><dishes>4x Grilled Chicken
+3x Greek Salade
+1x Fried Potatos
+4x Apple Pie
+1x Molten Cake
+2x Mushroom Soup
+3x Beef Steak
+</dishes><price>1219.5</price></order><order><name>John Doe</name><table>5</table><dishes>2x Grilled Chicken
+1x Greek Salade
+1x Fried Potatos
+1x Apple Pie
+1x Mushroom Soup
+3x Beef Steak
+</dishes><price>649.0</price></order><order><name>John Doe</name><table>3</table><dishes>1x Grilled Chicken
+1x Greek Salade
+1x Fried Potatos
+1x Apple Pie
+1x Molten Cake
+1x Mushroom Soup
+1x Beef Steak
+</dishes><price>450.75</price></order><order><name>John Doe</name><table>2</table><dishes>2x Grilled Chicken
+5x Greek Salade
+4x Fried Potatos
+2x Apple Pie
+2x Molten Cake
+3x Mushroom Soup
+1x Beef Steak
+</dishes><price>1060.0</price></order></orders></reservations>

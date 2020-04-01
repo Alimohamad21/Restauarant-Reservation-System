@@ -9,8 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OrderinfoscreenController implements Initializable {
-    @FXML
-    Button back;
+
     @FXML
     Button exit;
     @FXML
@@ -19,21 +18,17 @@ public class OrderinfoscreenController implements Initializable {
     Label totalprice;
     @FXML
     Label order;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
     public void printTotalprice(String orderprice,String orderinfo)
     {
         totalprice.setText(orderprice+" L.E");
         order.setText(orderinfo);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-    public void goback(ActionEvent event)
-    {
-        GUIfunctions guifunction=new GUIfunctions();
-        guifunction.switchScene(event,"orderscreen.fxml");
-    }
     public void quit()
     {
         Stage stage = (Stage) exit.getScene().getWindow();

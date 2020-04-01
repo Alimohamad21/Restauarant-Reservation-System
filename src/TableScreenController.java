@@ -41,18 +41,29 @@ public class TableScreenController implements Initializable {
     @FXML Button back;
     @FXML Label helloname;
     @FXML AnchorPane main;
+    @FXML Label verify;
+    @FXML Label fake;
     List<Button> nonSmokingTables=new ArrayList<Button>();
     List<Button> smokingTables=new ArrayList<Button>();
     List<Label> noOfPersons=new ArrayList<Label>();
     List<Label> snoOfPersons=new ArrayList<Label>();
     List<Integer> flags=new ArrayList<Integer>();
-
-
+    private int tableNumber=0;
     public TableScreenController() throws JAXBException {
     }
-
+    JAXBContext jaxbContext= JAXBContext.newInstance(FRestaurant.class);
+    Unmarshaller unmarshaller=jaxbContext.createUnmarshaller();
+    FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
+    JAXBContext jaxbContext1= JAXBContext.newInstance(FReservations.class);
+    Unmarshaller unmarshaller1=jaxbContext1.createUnmarshaller();
+    FReservations reservations = (FReservations) unmarshaller1.unmarshal(new File("saveData.xml"));
    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {int i;
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+       /*BackgroundImage myBI= new BackgroundImage(new Image("https://besthqwallpapers.com/Uploads/5-8-2019/100501/thumb2-light-wood-texture-wood-light-background-texture-of-natural-materials-wood.jpg",600,700,false,true),
+               BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+               BackgroundSize.DEFAULT);*/
+//then you set to your node
+      // main.setBackground(new Background(myBI));int i;
        nonSmokingTables.add(table1);
        nonSmokingTables.add(table2);
        nonSmokingTables.add(table3);
@@ -76,23 +87,37 @@ public class TableScreenController implements Initializable {
                 smokingTables.get(smokingtablescounter).setText(Integer.toString(fTable.getNumber()));
                 snoOfPersons.get(smokingtablescounter).setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
                 smokingTables.get(smokingtablescounter).setVisible(true);
+                for (FOrder order : reservations.getFOrders().getFOrders()) {
+                    if(order.getTableNumber()==fTable.getNumber()) {
+                        smokingTables.get(smokingtablescounter).setVisible(false);
+                        snoOfPersons.get(smokingtablescounter).setVisible(false);
+                    }
+                }
                 smokingtablescounter++;
                 }
          if (!fTable.isSmoking()) {
              nonSmokingTables.get(tablescounter).setText(Integer.toString(fTable.getNumber()));
              noOfPersons.get(tablescounter).setText(Integer.toString(fTable.getNumberOfSeats())+" persons");
              nonSmokingTables.get(tablescounter).setVisible(true);
+             for (FOrder order : reservations.getFOrders().getFOrders()) {
+                 if(order.getTableNumber()==fTable.getNumber()) {
+                     nonSmokingTables.get(tablescounter).setVisible(false);
+                     noOfPersons.get(tablescounter).setVisible(false);
+                 }
+             }
              tablescounter++;
                 }
             }
     }
-    JAXBContext jaxbContext= JAXBContext.newInstance(FRestaurant.class);
-    Unmarshaller unmarshaller=jaxbContext.createUnmarshaller();
-    FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
-    FRestaurant fSavedRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("saveData.xml"));
+
     public void setHelloname(String name){
         helloname.setText("Welcome back Mr."+name);
     }
+    public void setFake(String name){
+        fake.setText(name);
+    }
+
+
     public void reserveTable1() {
         int i;
   for(i=0;i<smokingTables.size();i++) {
@@ -101,6 +126,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             if(i!=0)nonSmokingTables.get(i).setDisable(true);
         }
+        tableNumber=Integer.parseInt(table1.getText());
 
     }
 
@@ -113,7 +139,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             if(i!=1)nonSmokingTables.get(i).setDisable(true);
         }
-
+        tableNumber=Integer.parseInt(table2.getText());
 
     }
     public void reserveTable3(){
@@ -125,8 +151,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             if(i!=2)nonSmokingTables.get(i).setDisable(true);
         }
-
-
+        tableNumber=Integer.parseInt(table3.getText());
     }
     public void reserveTable4(){
 
@@ -137,8 +162,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             if(i!=3)nonSmokingTables.get(i).setDisable(true);
         }
-
-
+        tableNumber=Integer.parseInt(table4.getText());
     }
     public void reserveTable5(){
 
@@ -149,9 +173,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             nonSmokingTables.get(i).setDisable(true);
         }
-
-
-
+        tableNumber=Integer.parseInt(table5.getText());
     }
     public void reserveTable6(){
 
@@ -162,7 +184,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             nonSmokingTables.get(i).setDisable(true);
         }
-
+        tableNumber=Integer.parseInt(table6.getText());
     }
     public void reserveTable7(){
         int i;
@@ -172,6 +194,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             nonSmokingTables.get(i).setDisable(true);
         }
+        tableNumber=Integer.parseInt(table7.getText());
     }
     public void reserveTable8(){
 
@@ -182,6 +205,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             nonSmokingTables.get(i).setDisable(true);
         }
+        tableNumber=Integer.parseInt(table8.getText());
     }
     public void unselect()
     {
@@ -192,6 +216,7 @@ public class TableScreenController implements Initializable {
         for(i=0;i<nonSmokingTables.size();i++) {
             nonSmokingTables.get(i).setDisable(false);
         }
+        tableNumber=0;
     }
     public void goback(ActionEvent event)
     {
@@ -199,8 +224,22 @@ public class TableScreenController implements Initializable {
         guifunction.switchScene(event,"loginscreen.fxml");
     }
     public void nextscreen(ActionEvent event)
-    {
-        GUIfunctions guifunction=new GUIfunctions();
-        guifunction.switchScene(event,"orderscreen.fxml");
+    {if(tableNumber==0)
+        verify.setVisible(true);
+    else {  try {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("orderscreen.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        OrderscreenController scene2=fxmlLoader.getController();
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene2.setNamefakelabel(fake.getText());
+        scene2.setTablenofakelabel(Integer.toString(tableNumber));
+        Scene scene = new Scene(root1);
+        stage.setScene(scene);
+        stage.show();
+    } catch (Exception e) {
+        System.out.println("error");
+    }
+
+    }
     }
 }

@@ -61,7 +61,7 @@
       </Button>
       <Label fx:id="table6persons" layoutX="428.0" layoutY="231.0" prefHeight="17.0" prefWidth="68.0" />
       <Label fx:id="table7persons" layoutX="428.0" layoutY="301.0" prefHeight="17.0" prefWidth="68.0" />
-      <Label layoutX="16.0" layoutY="393.0" prefHeight="35.0" prefWidth="340.0" text="*Pale tables are not available for reservation" textFill="#f30b0b">
+      <Label layoutX="16.0" layoutY="393.0" prefHeight="35.0" prefWidth="340.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -92,5 +92,11 @@
             <Font name="Bodoni MT Black" size="18.0" />
          </font></Button>
       <Label fx:id="table4persons" layoutX="91.0" layoutY="376.0" />
+      <Label fx:id="verify" layoutX="20.0" layoutY="376.0" prefHeight="17.0" prefWidth="269.0" text="No table selected, please choose a table" textFill="#e80909" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fake" layoutX="212.0" layoutY="438.0" visible="false" />
    </children>
 </AnchorPane>

@@ -21,14 +21,14 @@
         <user>
             <name>George Robben</name>
             <role>Waiter</role>
-            <username>george</username>
-            <password>k6987_#LpQ</password>
+            <username>b</username>
+            <password>2</password>
         </user>
         <user>
             <name>Tomas Hobbens</name>
             <role>Cooker</role>
-            <username>hobbens_tom</username>
-            <password>cooker_pass</password>
+            <username>a</username>
+            <password>1</password>
         </user>
     </users>
     <tables>

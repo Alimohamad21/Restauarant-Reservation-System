@@ -20,9 +20,8 @@ public class Order {
             this.totalPrice = this.totalPrice + +(quantity*(dish.getPrice() + (dish.getPrice() * 0.2)));
     }
 
-    void addToViewedOrder(FDish dish, int quantity) {
+    void addToOrder(FDish dish, int quantity) {
         if(quantity>0)
             this.customerOrder+=quantity+"x "+dish.getName()+"\n";
-
     }
 }

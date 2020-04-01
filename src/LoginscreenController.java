@@ -81,7 +81,8 @@ public class LoginscreenController{
                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("tablescreen.fxml"));
                            Parent root1 = (Parent) fxmlLoader.load();
                            TableScreenController scene2 = fxmlLoader.getController();
-                           scene2.setHelloname(fUser.getName());
+                           scene2.setHelloname(fUser.getName());//welcomes user
+                           scene2.setFake(fUser.getName());//passes name to next scene
                            Scene scene = new Scene(root1);
                            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                            stage.setScene(scene);
@@ -91,16 +92,56 @@ public class LoginscreenController{
                        }
                    } else if (mode.equals("waiter") && fUser.getRole().equalsIgnoreCase("waiter")) {
                        flag = false;
+                       try {Waiter waiter=new Waiter();
+                           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("employeescreen.fxml"));
+                           Parent root1 = (Parent) fxmlLoader.load();
+                           EmployeescreenController scene2 = fxmlLoader.getController();
+                           scene2.viewStats(waiter.viewStatistics());
+                           scene2.setHelloname(fUser.getName());
+                           Scene scene = new Scene(root1);
+                           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                           stage.setScene(scene);
+                           stage.show();
+                       } catch (Exception e) {
+                           verify.setText("Error opening scene");
+                       }
                    } else if (mode.equals("cook") && fUser.getRole().equalsIgnoreCase("cooker")) {
                        flag = false;
+                       try {
+                           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("employeescreen.fxml"));
+                           Parent root1 = (Parent) fxmlLoader.load();
+                           EmployeescreenController scene2 = fxmlLoader.getController();
+                           scene2.setHelloname(fUser.getName());
+                           Cook cook=new Cook();
+                           scene2.viewStats(cook.viewStatistics());
+                           Scene scene = new Scene(root1);
+                           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                           stage.setScene(scene);
+                           stage.show();
+                       } catch (Exception e) {
+                           verify.setText("Error opening scene");
+                       }
                    } else if (mode.equals("manager") && fUser.getRole().equalsIgnoreCase("manager")) {
                        flag = false;
+                       try {Manager manager=new Manager();
+                           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("employeescreen.fxml"));
+                           Parent root1 = (Parent) fxmlLoader.load();
+                           EmployeescreenController scene2 = fxmlLoader.getController();
+                           scene2.setHelloname(fUser.getName());
+                           scene2.viewStats(manager.viewStatistics());
+                           scene2.viewTotalIncome(manager.viewTotalIncome());
+                           Scene scene = new Scene(root1);
+                           Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                           stage.setScene(scene);
+                           stage.show();
+                       } catch (Exception e) {
+                           verify.setText("Error opening scene");
+                       }
                    }
                }
            }
            if (flag)
                verify.setText("Invalid username or password");
-           else verify.setText("Login successful");
        }catch(Exception e){verify.setText("Invalid username or password");}
     }
     }
