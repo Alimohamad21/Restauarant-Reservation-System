@@ -47,7 +47,6 @@ public class TableScreenController implements Initializable {
     List<Button> smokingTables=new ArrayList<Button>();
     List<Label> noOfPersons=new ArrayList<Label>();
     List<Label> snoOfPersons=new ArrayList<Label>();
-    List<Integer> flags=new ArrayList<Integer>();
     private int tableNumber=0;
     public TableScreenController() throws JAXBException {
     }
@@ -57,6 +56,7 @@ public class TableScreenController implements Initializable {
     JAXBContext jaxbContext1= JAXBContext.newInstance(FReservations.class);
     Unmarshaller unmarshaller1=jaxbContext1.createUnmarshaller();
     FReservations reservations = (FReservations) unmarshaller1.unmarshal(new File("saveData.xml"));
+
    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
        /*BackgroundImage myBI= new BackgroundImage(new Image("https://besthqwallpapers.com/Uploads/5-8-2019/100501/thumb2-light-wood-texture-wood-light-background-texture-of-natural-materials-wood.jpg",600,700,false,true),

@@ -3,7 +3,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-public class Cook extends Employee {
+public class Cook extends Employee  {
 
     protected Cook() throws JAXBException {
     }
@@ -12,9 +12,10 @@ public class Cook extends Employee {
     String viewStatistics() {String statistics="";
         int i=1;
        for (FOrder order : reservations.getFOrders().getFOrders())
-       {
-           statistics+=i+")"+"Table:"+order.getTableNumber()+"\n-Order:\n"+order.getOrderedDishes()+"\n\n";
+       {if(!order.getName().equals("")) {//So it doesn't read fake customer
+           statistics += i + ")" + "Table:" + order.getTableNumber() + "\n-Order:\n" + order.getOrderedDishes() + "\n\n";
            i++;
+       }
        }
         return statistics;
     }

@@ -18,11 +18,13 @@ public class Customer {
         FOrders forders = new FOrders();
         FOrder forder=new FOrder();
         List<FOrder> orderList=new ArrayList<>();
-        if(file.length()!=0) {
+        try{
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             FReservations reservations = (FReservations) unmarshaller.unmarshal(file);
             for (FOrder order1 : reservations.getFOrders().getFOrders())
                 orderList.add(order1);
+        }catch(Exception e){
+            
         }
         forder.setName(name);
         forder.setTableNumber(tableNumber);

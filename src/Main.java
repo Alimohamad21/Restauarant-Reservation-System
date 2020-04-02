@@ -24,8 +24,5 @@ public class Main {
         for (FDish fDish : fRestaurant.getFDishes().getFDishes()) {
             System.out.println("dish name : " + fDish.getName() + "\n" + "price : " + fDish.getPrice() + "\n" + "type :" + fDish.getType() + "\n" + "--------------");
         }*/
-        Customer customer=new Customer();
-        customer.makeReservation("Ali",5,"1x Fries",10.0);
-        customer.makeReservation("Hussein",5,"2x Fries",10.0);
     }
 }

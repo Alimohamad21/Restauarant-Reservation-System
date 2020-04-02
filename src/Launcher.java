@@ -4,6 +4,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.xml.bind.JAXBException;
+import java.io.File;
+
 
 public class Launcher extends Application {
 
@@ -16,7 +19,12 @@ public class Launcher extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JAXBException {
+        File file=new File("saveData.xml");
+        if(file.length()==0) {
+            Customer fake = new Customer();//To handle all errors coming from loading empty files
+            fake.makeReservation("",0,"",0.0);
+        }
         launch(args);
     }
 }
