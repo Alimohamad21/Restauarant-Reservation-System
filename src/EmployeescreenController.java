@@ -30,16 +30,21 @@ public class EmployeescreenController implements Initializable {
     TextArea stats;
     @FXML
     Button clear;
-    @FXML Label managerlabel;
+    @FXML
+    Label managerlabel;
     @FXML
     RadioButton yes;
-    @FXML Label more;
-    @FXML ChoiceBox<Integer> tables;
-    @FXML Button delete;
+    @FXML
+    Label more;
+    @FXML
+    ChoiceBox<Integer> tables;
+    @FXML
+    Button delete;
 
-    JAXBContext jaxbContext1= JAXBContext.newInstance(FReservations.class);
-    Unmarshaller unmarshaller1=jaxbContext1.createUnmarshaller();
+    JAXBContext jaxbContext1 = JAXBContext.newInstance(FReservations.class);
+    Unmarshaller unmarshaller1 = jaxbContext1.createUnmarshaller();
     FReservations reservations = (FReservations) unmarshaller1.unmarshal(new File("saveData.xml"));
+
     public EmployeescreenController() throws JAXBException {
     }
 
@@ -47,28 +52,30 @@ public class EmployeescreenController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-    public void viewStats(String statistics)
-    {
+
+    public void viewStats(String statistics) {
         stats.setText(statistics);
     }
-    public void setHelloname(String name){
-        helloname.setText("Welcome back Mr."+name);
+
+    public void setHelloname(String name) {
+        helloname.setText("Welcome back Mr." + name);
     }
-    public void viewTotalIncome(String totalIncome)
-    {
-        totalincome.setText("Total income:"+totalIncome+" L.E");
+
+    public void viewTotalIncome(String totalIncome) {
+        totalincome.setText("Total income:" + totalIncome + " L.E");
         clear.setVisible(true);
         managerlabel.setVisible(true);
         yes.setVisible(true);
     }
-    public void showMore()
-    {int i=0;
+
+    public void showMore() {
+        int i = 0;
         for (FOrder order : reservations.getFOrders().getFOrders()) {
-            if(order.getTableNumber()!=0) {
-                if(i==0) {
-                tables.setValue(order.getTableNumber());
-                i++;
-            }
+            if (order.getTableNumber() != 0) {
+                if (i == 0) {
+                    tables.setValue(order.getTableNumber());
+                    i++;
+                }
                 tables.getItems().add(order.getTableNumber());
             }
         }
@@ -76,26 +83,27 @@ public class EmployeescreenController implements Initializable {
         delete.setVisible(true);
         tables.setVisible(true);
     }
+
     public void clearReservations() throws JAXBException {
-        Manager manager=new Manager();
+        Manager manager = new Manager();
         manager.clearAllReservations();
         stats.setText("");
         totalincome.setText("Total income:0.0 L.E");
     }
+
     public void deleteReservations(ActionEvent event) throws JAXBException {
-        Manager manager=new Manager();
+        Manager manager = new Manager();
         manager.deleteReservation(tables.getValue());
         stats.setText(manager.viewStatistics());
-        totalincome.setText(("Total income:"+manager.viewTotalIncome()+" L.E"));
+        totalincome.setText(("Total income:" + manager.viewTotalIncome() + " L.E"));
     }
 
-    public void loggedout(ActionEvent event)
-    {
-        GUIfunctions guifunction=new GUIfunctions();
-        guifunction.switchScene(event,"loginscreen.fxml");
+    public void loggedout(ActionEvent event) {
+        GUIfunctions guifunction = new GUIfunctions();
+        guifunction.switchScene(event, "loginscreen.fxml");
     }
-    public void quit()
-    {
+
+    public void quit() {
         Stage stage = (Stage) exit.getScene().getWindow();
         stage.close();
     }

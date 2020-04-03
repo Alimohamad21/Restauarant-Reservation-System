@@ -12,51 +12,55 @@ public class Manager extends Employee {
 
 
     @Override
-    String viewStatistics() {String statistics="";
-        int i=1;
-        for (FOrder order : reservations.getFOrders().getFOrders())
-        {if(!order.getName().equals("")) { //So it doesn't read fake customer
-            statistics += i + ")" + "Table:" + order.getTableNumber() + "\n-Name:" + order.getName() + "\n-Order:\n" + order.getOrderedDishes() + "\n-Total price:" + order.getTotalPrice() + " L.E\n\n";
-            i++;
-        }
+    String viewStatistics() {
+        String statistics = "";
+        int i = 1;
+        for (FOrder order : reservations.getFOrders().getFOrders()) {
+            if (!order.getName().equals("")) { //So it doesn't read fake customer
+                statistics += i + ")" + "Table:" + order.getTableNumber() + "\n-Name:" + order.getName() + "\n-Order:\n" + order.getOrderedDishes() + "\n-Total price:" + order.getTotalPrice() + " L.E\n\n";
+                i++;
+            }
         }
         return statistics;
     }
-    String viewTotalIncome() {Double totalIncome=0.0;
-        for (FOrder order : reservations.getFOrders().getFOrders())
-        {
-           totalIncome+=order.getTotalPrice();
+
+    String viewTotalIncome() {
+        Double totalIncome = 0.0;
+        for (FOrder order : reservations.getFOrders().getFOrders()) {
+            totalIncome += order.getTotalPrice();
         }
         return Double.toString(totalIncome);
     }
+
     void deleteReservation(int tableNumber) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(FReservations.class);
-        File file=new File("saveData.xml");
+        File file = new File("saveData.xml");
         Marshaller marshaller = jaxbContext.createMarshaller();
-        FReservations reservation=new FReservations();
+        FReservations reservation = new FReservations();
         FOrders forders = new FOrders();
-        List<FOrder> orderList=new ArrayList<>();
-        try{
+        List<FOrder> orderList = new ArrayList<>();
+        try {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             FReservations reservations = (FReservations) unmarshaller.unmarshal(file);
             for (FOrder order1 : reservations.getFOrders().getFOrders()) {
-                if(order1.getTableNumber()==tableNumber)
-                continue;
+                if (order1.getTableNumber() == tableNumber)
+                    continue;
                 orderList.add(order1);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
 
         }
         forders.setFOrders(orderList);
         reservation.setFOrders(forders);
-        marshaller.marshal(reservation,new File("saveData.xml"));
+        marshaller.marshal(reservation, new File("saveData.xml"));
     }
+
     void clearAllReservations() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(FReservations.class);
-        File file=new File("saveData.xml");
+        File file = new File("saveData.xml");
         Marshaller marshaller = jaxbContext.createMarshaller();
-        FReservations reservation=new FReservations();
+        FReservations reservation = new FReservations();
         reservation.setFOrders(null);
-        marshaller.marshal(reservation,new File("saveData.xml"));
+        marshaller.marshal(reservation, new File("saveData.xml"));
     }
 }

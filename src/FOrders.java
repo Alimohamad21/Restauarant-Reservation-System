@@ -4,10 +4,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlRootElement(name="tables")
+@XmlRootElement(name = "tables")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FOrders {
-    @XmlElement(name="order")
+    @XmlElement(name = "order")
     private List<FOrder> FOrders;
 
     public List<FOrder> getFOrders() {

@@ -3,18 +3,20 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="dish")
+@XmlRootElement(name = "dish")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FDish {
     @XmlElement(name = "name")
     private String name;
-    @XmlElement(name="type")
+    @XmlElement(name = "type")
     private String type;
     @XmlElement(name = "price")
     private double price;
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }

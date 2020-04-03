@@ -3,11 +3,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="restaurant")
+@XmlRootElement(name = "restaurant")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FRestaurant {
     @XmlElement(name = "users")
     private FUsers FUsers = null;
+
     public FUsers getFUsers() {
         return FUsers;
     }
@@ -15,7 +16,8 @@ public class FRestaurant {
     public void setFUsers(FUsers FUsers) {
         this.FUsers = FUsers;
     }
-    @XmlElement(name="tables")
+
+    @XmlElement(name = "tables")
     private FTables FTables = null;
 
     public FTables getFTables() {

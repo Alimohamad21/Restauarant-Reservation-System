@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name></name><table>0</table><dishes></dishes><price>0.0</price></order><order><name>khaled</name><table>5</table><dishes>1x Grilled Chicken
-3x Pizza
-1x Greek Salade
-3x Nuggets
-3x Fried Potatos
-4x Apple Pie
-1x Chocolate Cake
-1x Molten Cake
-6x Fatta Crispy
-2x Mushroom Soup
-2x Beef Steak
-</dishes><price>1647.5</price></order></orders></reservations>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name></name><table>0</table><dishes></dishes><price>0.0</price></order></orders></reservations>

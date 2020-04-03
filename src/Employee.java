@@ -6,8 +6,10 @@ import java.io.File;
 public abstract class Employee {
     JAXBContext jaxbContext = JAXBContext.newInstance(FReservations.class);
     Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-    FReservations reservations= (FReservations) unmarshaller.unmarshal(new File("saveData.xml"));
+    FReservations reservations = (FReservations) unmarshaller.unmarshal(new File("saveData.xml"));
+
     protected Employee() throws JAXBException {
     }
+
     abstract String viewStatistics();
 }

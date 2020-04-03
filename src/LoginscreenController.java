@@ -6,13 +6,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 import java.io.File;
 
-public class LoginscreenController{
+public class LoginscreenController {
     @FXML
     RadioButton customer;
     @FXML
@@ -34,16 +35,17 @@ public class LoginscreenController{
     private String mode;
 
 
-    JAXBContext jaxbContext= JAXBContext.newInstance(FRestaurant.class);
-    Unmarshaller unmarshaller=jaxbContext.createUnmarshaller();
+    JAXBContext jaxbContext = JAXBContext.newInstance(FRestaurant.class);
+    Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
     FRestaurant fRestaurant = (FRestaurant) unmarshaller.unmarshal(new File("inputData.xml"));
 
 
     public LoginscreenController() throws JAXBException {
     }
-    public void setSignup(ActionEvent event)
-    {GUIfunctions guifunction=new GUIfunctions();
-    guifunction.switchScene(event,"signupscreen.fxml");
+
+    public void setSignup(ActionEvent event) {
+        GUIfunctions guifunction = new GUIfunctions();
+        guifunction.switchScene(event, "signupscreen.fxml");
     }
 
 
@@ -51,33 +53,34 @@ public class LoginscreenController{
         manager.setSelected(false);
         waiter.setSelected(false);
         cook.setSelected(false);
-        mode="customer";
-   }
+        mode = "customer";
+    }
 
 
     public void setWaiter(ActionEvent event) {
         manager.setSelected(false);
         customer.setSelected(false);
         cook.setSelected(false);
-        mode="waiter";
-   }
+        mode = "waiter";
+    }
 
     public void setManager(ActionEvent event) {
         waiter.setSelected(false);
         customer.setSelected(false);
         cook.setSelected(false);
-        mode="manager";
-   }
+        mode = "manager";
+    }
+
     public void setCook(ActionEvent event) {
         waiter.setSelected(false);
         customer.setSelected(false);
         manager.setSelected(false);
-        mode="cook";
+        mode = "cook";
     }
 
     public void setLogin(ActionEvent event) {
         boolean flag = true;
-        if(customer.isSelected() ||waiter.isSelected() ||cook.isSelected() || manager.isSelected()) {
+        if (customer.isSelected() || waiter.isSelected() || cook.isSelected() || manager.isSelected()) {
             try {
                 for (FUser fUser : fRestaurant.getFUsers().getFUsers()) {
                     if (fUser.getUsername().equalsIgnoreCase(username.getText()) && fUser.getPassword().equals(password.getText())) {
@@ -155,8 +158,7 @@ public class LoginscreenController{
             } catch (Exception e) {
                 verify.setText("Invalid username or password");
             }
-        }
-        else verify.setText("Invalid username or password");
+        } else verify.setText("Invalid username or password");
     }
-    }
+}
 

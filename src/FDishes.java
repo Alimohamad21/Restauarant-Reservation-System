@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlRootElement(name ="dishes")
+@XmlRootElement(name = "dishes")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FDishes {
     @XmlElement(name = "dish")

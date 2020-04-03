@@ -3,14 +3,14 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="table")
+@XmlRootElement(name = "table")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FTable {
     @XmlElement(name = "number")
     private int number;
-    @XmlElement(name= "number_of_seats")
+    @XmlElement(name = "number_of_seats")
     private int numberOfSeats;
-    @XmlElement(name="smoking")
+    @XmlElement(name = "smoking")
     private boolean smoking;
 
     public int getNumber() {

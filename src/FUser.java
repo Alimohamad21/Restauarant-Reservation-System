@@ -3,17 +3,17 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="user")
+@XmlRootElement(name = "user")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FUser {
 
-    @XmlElement(name="name")
+    @XmlElement(name = "name")
     private String name;
-    @XmlElement(name="role")
+    @XmlElement(name = "role")
     private String role;
-    @XmlElement(name="username")
+    @XmlElement(name = "username")
     private String username;
-    @XmlElement(name="password")
+    @XmlElement(name = "password")
     private String password;
 
     public String getName() {

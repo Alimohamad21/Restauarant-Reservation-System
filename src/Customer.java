@@ -10,21 +10,22 @@ public class Customer {
 
     public Customer() throws JAXBException {
     }
-    void makeReservation(String name,int tableNumber,String order,Double totalPrice) throws JAXBException {
+
+    void makeReservation(String name, int tableNumber, String order, Double totalPrice) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(FReservations.class);
-        File file=new File("saveData.xml");
+        File file = new File("saveData.xml");
         Marshaller marshaller = jaxbContext.createMarshaller();
-        FReservations reservation=new FReservations();
+        FReservations reservation = new FReservations();
         FOrders forders = new FOrders();
-        FOrder forder=new FOrder();
-        List<FOrder> orderList=new ArrayList<>();
-        try{
+        FOrder forder = new FOrder();
+        List<FOrder> orderList = new ArrayList<>();
+        try {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             FReservations reservations = (FReservations) unmarshaller.unmarshal(file);
             for (FOrder order1 : reservations.getFOrders().getFOrders())
                 orderList.add(order1);
-        }catch(Exception e){
-            
+        } catch (Exception e) {
+
         }
         forder.setName(name);
         forder.setTableNumber(tableNumber);
@@ -33,6 +34,6 @@ public class Customer {
         orderList.add(forder);
         forders.setFOrders(orderList);
         reservation.setFOrders(forders);
-        marshaller.marshal(reservation,new File("saveData.xml"));
+        marshaller.marshal(reservation, new File("saveData.xml"));
     }
 }

@@ -4,10 +4,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlRootElement(name="tables")
+@XmlRootElement(name = "tables")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FTables {
-    @XmlElement(name= "table")
+    @XmlElement(name = "table")
     private List<FTable> FTables;
 
     public List<FTable> getFTables() {

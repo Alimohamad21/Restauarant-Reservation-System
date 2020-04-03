@@ -23,20 +23,19 @@ public class OrderinfoscreenController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-    public void printTotalprice(String orderprice,String orderinfo)
-    {
-        totalprice.setText(orderprice+" L.E");
+
+    public void printTotalprice(String orderprice, String orderinfo) {
+        totalprice.setText(orderprice + " L.E");
         order.setText(orderinfo);
     }
 
-    public void quit()
-    {
+    public void quit() {
         Stage stage = (Stage) exit.getScene().getWindow();
         stage.close();
     }
-    public void loggedout(ActionEvent event)
-    {
-        GUIfunctions guifunction=new GUIfunctions();
-        guifunction.switchScene(event,"loginscreen.fxml");
+
+    public void loggedout(ActionEvent event) {
+        GUIfunctions guifunction = new GUIfunctions();
+        guifunction.switchScene(event, "loginscreen.fxml");
     }
 }

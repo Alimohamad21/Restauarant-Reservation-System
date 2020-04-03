@@ -5,16 +5,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
-@XmlRootElement(name="order")
+@XmlRootElement(name = "order")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FOrder {
-    @XmlElement(name="name")
+    @XmlElement(name = "name")
     private String name;
-    @XmlElement(name="table")
+    @XmlElement(name = "table")
     private int tableNumber;
-    @XmlElement(name="dishes")
+    @XmlElement(name = "dishes")
     private String orderedDishes;
-    @XmlElement(name="price")
+    @XmlElement(name = "price")
     private double totalPrice;
 
     public String getName() {
@@ -38,7 +38,7 @@ public class FOrder {
     }
 
     public void setOrderedDishes(String orderedDishes) {
-        this.orderedDishes =orderedDishes;
+        this.orderedDishes = orderedDishes;
     }
 
     public double getTotalPrice() {
