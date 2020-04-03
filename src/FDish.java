@@ -12,11 +12,9 @@ public class FDish {
     private String type;
     @XmlElement(name = "price")
     private double price;
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

@@ -48,6 +48,7 @@ public class TableScreenController implements Initializable {
     List<Label> noOfPersons=new ArrayList<Label>();
     List<Label> snoOfPersons=new ArrayList<Label>();
     private int tableNumber=0;
+    private int noOfPerson;
     public TableScreenController() throws JAXBException {
     }
     JAXBContext jaxbContext= JAXBContext.newInstance(FRestaurant.class);
@@ -127,6 +128,7 @@ public class TableScreenController implements Initializable {
             if(i!=0)nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table1.getText());
+        noOfPerson=Integer.parseInt(table1persons.getText().replaceAll("[^0-9]", ""));
 
     }
 
@@ -140,6 +142,7 @@ public class TableScreenController implements Initializable {
             if(i!=1)nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table2.getText());
+        noOfPerson=Integer.parseInt(table2persons.getText().replaceAll("[^0-9]", ""));
 
     }
     public void reserveTable3(){
@@ -152,6 +155,7 @@ public class TableScreenController implements Initializable {
             if(i!=2)nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table3.getText());
+        noOfPerson=Integer.parseInt(table3persons.getText().replaceAll("[^0-9]", ""));
     }
     public void reserveTable4(){
 
@@ -163,6 +167,7 @@ public class TableScreenController implements Initializable {
             if(i!=3)nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table4.getText());
+        noOfPerson=Integer.parseInt(table4persons.getText().replaceAll("[^0-9]", ""));
     }
     public void reserveTable5(){
 
@@ -174,6 +179,7 @@ public class TableScreenController implements Initializable {
             nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table5.getText());
+        noOfPerson=Integer.parseInt(table5persons.getText().replaceAll("[^0-9]", ""));
     }
     public void reserveTable6(){
 
@@ -185,6 +191,7 @@ public class TableScreenController implements Initializable {
             nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table6.getText());
+        noOfPerson=Integer.parseInt(table6persons.getText().replaceAll("[^0-9]", ""));
     }
     public void reserveTable7(){
         int i;
@@ -195,6 +202,7 @@ public class TableScreenController implements Initializable {
             nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table7.getText());
+        noOfPerson=Integer.parseInt(table7persons.getText().replaceAll("[^0-9]", ""));
     }
     public void reserveTable8(){
 
@@ -206,6 +214,7 @@ public class TableScreenController implements Initializable {
             nonSmokingTables.get(i).setDisable(true);
         }
         tableNumber=Integer.parseInt(table8.getText());
+        noOfPerson=Integer.parseInt(table8persons.getText().replaceAll("[^0-9]", ""));
     }
     public void unselect()
     {
@@ -232,6 +241,7 @@ public class TableScreenController implements Initializable {
         OrderscreenController scene2=fxmlLoader.getController();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene2.setNamefakelabel(fake.getText());
+        scene2.noOfpersons=noOfPerson;
         scene2.setTablenofakelabel(Integer.toString(tableNumber));
         Scene scene = new Scene(root1);
         stage.setScene(scene);

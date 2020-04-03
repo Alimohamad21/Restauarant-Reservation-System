@@ -1,20 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name></name><table>0</table><dishes></dishes><price>0.0</price></order><order><name>John Doe</name><table>1</table><dishes>1x Grilled Chicken
-2x Greek Salade
-1x Fried Potatos
-3x Apple Pie
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name></name><table>0</table><dishes></dishes><price>0.0</price></order><order><name>khaled</name><table>5</table><dishes>1x Grilled Chicken
+3x Pizza
+1x Greek Salade
+3x Nuggets
+3x Fried Potatos
+4x Apple Pie
+1x Chocolate Cake
 1x Molten Cake
+6x Fatta Crispy
 2x Mushroom Soup
 2x Beef Steak
-</dishes><price>770.25</price></order><order><name>Ali Mohamed</name><table>2</table><dishes>1x Grilled Chicken
-3x Greek Salade
-1x Fried Potatos
-3x Apple Pie
-1x Molten Cake
-3x Mushroom Soup
-1x Beef Steak
-</dishes><price>785.75</price></order><order><name>Ali Mohamed</name><table>5</table><dishes>1x Grilled Chicken
-3x Greek Salade
-1x Fried Potatos
-1x Molten Cake
-3x Mushroom Soup
-</dishes><price>513.75</price></order></orders></reservations>
+</dishes><price>1647.5</price></order></orders></reservations>

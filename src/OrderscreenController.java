@@ -98,9 +98,11 @@ public class OrderscreenController implements Initializable {
     Label namefakelabel;
     @FXML
     Label tablenofakelabel;
+    @FXML Label verify;
     private int maindishescounter = 0;
     private int appetizerscounter = 0;
     private int dessertcounter = 0;
+    public int noOfpersons;
     List<Label> mainDishesNames = new ArrayList<Label>();
     List<Label> mainDishesPrices = new ArrayList<Label>();
     List<Label> appetizerNames = new ArrayList<Label>();
@@ -158,6 +160,7 @@ public class OrderscreenController implements Initializable {
         dessertNames.add(dessert3name);
         dessertPrices.add(dessert3price);
         dessertSpinners.add(dessert3spinner);
+
         for (i = 0; i < mainDishSpinners.size(); i++) {
             this.mainDishSpinners.get(i).setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0));
         }
@@ -207,37 +210,47 @@ public class OrderscreenController implements Initializable {
 
     public void nextscreen(ActionEvent event) {
         Order order = new Order();
-        int i, j, k;
+        int i, j, k,c;
         i = j = k = 0;
-        for (FDish fDish : fRestaurant.getFDishes().getFDishes()) {
-            if (fDish.getType().equalsIgnoreCase("main_course")) {
-                order.calculateDishPrice(fDish, mainDishSpinners.get(i).getValue());
-                order.addToOrder(fDish,mainDishSpinners.get(i).getValue());
-                i++;
-            } else if (fDish.getType().equalsIgnoreCase("appetizer")) {
-                order.calculateDishPrice(fDish, appetizerSpinners.get(j).getValue());
-                order.addToOrder(fDish, appetizerSpinners.get(j).getValue());
-                j++;
-            } else if (fDish.getType().equalsIgnoreCase("desert")) {
-                order.calculateDishPrice(fDish, dessertSpinners.get(k).getValue());
-                order.addToOrder(fDish, dessertSpinners.get(k).getValue());
-                k++;
+        int noOfDishes=0;
+        for (c = 0; c < dessertSpinners.size(); c++)
+            noOfDishes+=dessertSpinners.get(c).getValue();
+        for (c = 0; c < mainDishSpinners.size(); c++)
+            noOfDishes+=mainDishSpinners.get(c).getValue();
+            for (c = 0; c < appetizerSpinners.size(); c++)
+                noOfDishes+=appetizerSpinners.get(c).getValue();
+            if(noOfDishes>=noOfpersons) {
+                for (FDish fDish : fRestaurant.getFDishes().getFDishes()) {
+                    if (fDish.getType().equalsIgnoreCase("main_course")) {
+                        order.calculateDishPrice(fDish, mainDishSpinners.get(i).getValue());
+                        order.addToOrder(fDish, mainDishSpinners.get(i).getValue());
+                        i++;
+                    } else if (fDish.getType().equalsIgnoreCase("appetizer")) {
+                        order.calculateDishPrice(fDish, appetizerSpinners.get(j).getValue());
+                        order.addToOrder(fDish, appetizerSpinners.get(j).getValue());
+                        j++;
+                    } else if (fDish.getType().equalsIgnoreCase("desert")) {
+                        order.calculateDishPrice(fDish, dessertSpinners.get(k).getValue());
+                        order.addToOrder(fDish, dessertSpinners.get(k).getValue());
+                        k++;
+                    }
+                }
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("orderinfoscreen.fxml"));
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    OrderinfoscreenController scene2 = fxmlLoader.getController();
+                    scene2.printTotalprice(Double.toString(order.getTotalPrice()), order.getCustomerOrder());
+                    Customer customer = new Customer();
+                    customer.makeReservation(namefakelabel.getText(), Integer.parseInt(tablenofakelabel.getText()), order.getCustomerOrder(), order.getTotalPrice());
+                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    Scene scene = new Scene(root1);
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (Exception e) {
+                    System.out.println("error");
+                }
             }
-        }
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("orderinfoscreen.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                OrderinfoscreenController scene2=fxmlLoader.getController();
-                scene2.printTotalprice(Double.toString(order.getTotalPrice()),order.getCustomerOrder());
-                Customer customer=new Customer();
-                customer.makeReservation(namefakelabel.getText(),Integer.parseInt(tablenofakelabel.getText()),order.getCustomerOrder(),order.getTotalPrice());
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root1);
-                stage.setScene(scene);
-                stage.show();
-            } catch (Exception e) {
-                System.out.println("error");
-            }
+            else verify.setText("You must order a minimum of "+noOfpersons+" dishes");
         }
     }
 

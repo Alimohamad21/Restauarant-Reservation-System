@@ -26,7 +26,7 @@
             <Font name="Bauhaus 93" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="totalincome" layoutX="270.0" layoutY="405.0" prefHeight="33.0" prefWidth="213.0">
+      <Label fx:id="totalincome" layoutX="270.0" layoutY="405.0" prefHeight="33.0" prefWidth="262.0">
          <font>
             <Font name="Bauhaus 93" size="18.0" />
          </font>
@@ -35,5 +35,27 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></TextArea>
+      <Button fx:id="clear" layoutX="268.0" layoutY="464.0" mnemonicParsing="false" onAction="#clearReservations" prefHeight="33.0" prefWidth="193.0" text="clear all reservations" visible="false">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="managerlabel" layoutX="270.0" layoutY="88.0" prefHeight="17.0" prefWidth="250.0" text="Would you like to cancel any reservation?" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="yes" layoutX="292.0" layoutY="116.0" mnemonicParsing="false" onAction="#showMore" text="Yes" visible="false" />
+      <Label fx:id="more" layoutX="268.0" layoutY="154.0" prefHeight="17.0" prefWidth="327.0" text="Please choose the number of the Table you want to free: " visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="tables" layoutX="270.0" layoutY="179.0" prefHeight="25.0" prefWidth="57.0" visible="false" />
+      <Button fx:id="delete" layoutX="422.0" layoutY="232.0" mnemonicParsing="false" onAction="#deleteReservations" prefHeight="32.0" prefWidth="97.0" text="confirm" visible="false">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -54,7 +54,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="maindish4price" layoutX="16.0" layoutY="214.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="maindish4price" layoutX="22.0" layoutY="214.0" prefHeight="17.0" prefWidth="135.0" />
       <Label fx:id="maindish5name" layoutX="12.0" layoutY="228.0" prefHeight="27.0" prefWidth="167.0">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -122,5 +122,10 @@
       </Label>
       <Label fx:id="namefakelabel" layoutX="61.0" layoutY="322.0" prefHeight="17.0" prefWidth="24.0" visible="false" />
       <Label fx:id="tablenofakelabel" layoutX="71.0" layoutY="332.0" prefHeight="17.0" prefWidth="24.0" visible="false" />
+      <Label fx:id="verify" layoutX="16.0" layoutY="334.0" prefHeight="17.0" prefWidth="230.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -21,7 +21,7 @@ public class Launcher extends Application {
 
     public static void main(String[] args) throws JAXBException {
         File file=new File("saveData.xml");
-        if(file.length()==0) {
+        if(file.length()<100) {
             Customer fake = new Customer();//To handle all errors coming from loading empty files
             fake.makeReservation("",0,"",0.0);
         }
