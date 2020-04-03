@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="485.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OrderscreenController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="219.0" text="Main Dishes" textFill="#ea1111">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="311.0" layoutY="14.0" prefHeight="42.0" prefWidth="219.0" text="Appetizers" textFill="#df0808">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="311.0" layoutY="190.0" prefHeight="42.0" prefWidth="219.0" text="Desserts" textFill="#d80a0a">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="25.0" layoutY="414.0" mnemonicParsing="false" onAction="#goback" prefHeight="32.0" prefWidth="71.0" text="back">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="408.0" layoutY="414.0" mnemonicParsing="false" onAction="#nextscreen" prefHeight="32.0" prefWidth="183.0" text="confirm reservation">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="maindish1name" layoutX="16.0" layoutY="56.0" prefHeight="27.0" prefWidth="159.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maindish1price" layoutX="22.0" layoutY="83.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="maindish2name" layoutX="16.0" layoutY="100.0" prefHeight="27.0" prefWidth="159.0" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maindish2price" layoutX="22.0" layoutY="127.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="maindish3name" layoutX="16.0" layoutY="144.0" prefHeight="27.0" prefWidth="159.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maindish3price" layoutX="22.0" layoutY="171.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="maindish4name" layoutX="16.0" layoutY="184.0" prefHeight="27.0" prefWidth="159.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maindish4price" layoutX="22.0" layoutY="214.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="maindish5name" layoutX="12.0" layoutY="228.0" prefHeight="27.0" prefWidth="167.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maindish5price" layoutX="16.0" layoutY="255.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="maindish6name" layoutX="12.0" layoutY="272.0" prefHeight="27.0" prefWidth="167.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="maindish6price" layoutX="16.0" layoutY="299.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="appetizer1name" layoutX="311.0" layoutY="56.0" prefHeight="17.0" prefWidth="135.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="appetizer1price" layoutX="311.0" layoutY="83.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="appetizer2name" layoutX="311.0" layoutY="100.0" prefHeight="17.0" prefWidth="135.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="appetizer2price" layoutX="311.0" layoutY="127.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="appetizer3name" layoutX="311.0" layoutY="144.0" prefHeight="17.0" prefWidth="135.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="appetizer3price" layoutX="311.0" layoutY="171.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="dessert1name" layoutX="311.0" layoutY="228.0" prefHeight="17.0" prefWidth="135.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dessert1price" layoutX="311.0" layoutY="255.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="dessert2name" layoutX="311.0" layoutY="272.0" prefHeight="17.0" prefWidth="135.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dessert2price" layoutX="311.0" layoutY="299.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="dessert3name" layoutX="311.0" layoutY="316.0" prefHeight="17.0" prefWidth="135.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dessert3price" layoutX="311.0" layoutY="343.0" prefHeight="17.0" prefWidth="135.0" />
+      <Spinner fx:id="maindish1spinner" layoutX="165.0" layoutY="66.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="maindish2spinner" layoutX="165.0" layoutY="114.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="maindish3spinner" layoutX="165.0" layoutY="158.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="maindish4spinner" layoutX="165.0" layoutY="198.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="maindish5spinner" layoutX="165.0" layoutY="242.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="maindish6spinner" layoutX="165.0" layoutY="286.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="appetizer1spinner" layoutX="441.0" layoutY="66.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="appetizer2spinner" layoutX="441.0" layoutY="114.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="appetizer3spinner" layoutX="441.0" layoutY="158.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="dessert1spinner" layoutX="441.0" layoutY="242.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="dessert2spinner" layoutX="441.0" layoutY="286.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Spinner fx:id="dessert3spinner" layoutX="441.0" layoutY="330.0" prefHeight="25.0" prefWidth="58.0" visible="false" />
+      <Label layoutX="135.0" layoutY="372.0" prefHeight="32.0" prefWidth="317.0" text="Please Choose desired dishes" textFill="#22cd36">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="namefakelabel" layoutX="61.0" layoutY="322.0" prefHeight="17.0" prefWidth="24.0" visible="false" />
+      <Label fx:id="tablenofakelabel" layoutX="71.0" layoutY="332.0" prefHeight="17.0" prefWidth="24.0" visible="false" />
+      <Label fx:id="verify" layoutX="16.0" layoutY="334.0" prefHeight="17.0" prefWidth="230.0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

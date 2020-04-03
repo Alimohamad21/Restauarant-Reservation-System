@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="main" prefHeight="479.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TableScreenController">
+   <children>
+      <Button fx:id="table1" layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#reserveTable1" prefHeight="63.0" prefWidth="117.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font></Button>
+      <Button fx:id="table3" layoutX="58.0" layoutY="270.0" mnemonicParsing="false" onAction="#reserveTable3" prefHeight="63.0" prefWidth="117.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="table2" layoutX="58.0" layoutY="197.0" mnemonicParsing="false" onAction="#reserveTable2" prefHeight="63.0" prefWidth="117.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="table7" layoutX="383.0" layoutY="266.0" mnemonicParsing="false" onAction="#reserveTable7" prefHeight="57.0" prefWidth="136.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="table8" layoutX="382.0" layoutY="341.0" mnemonicParsing="false" onAction="#reserveTable8" prefHeight="57.0" prefWidth="136.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="39.0" layoutY="66.0" prefHeight="35.0" prefWidth="232.0" text="(non-smoking area)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="table1persons" layoutX="91.0" layoutY="163.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label fx:id="table2persons" layoutX="83.0" layoutY="237.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label layoutX="16.0" layoutY="32.0" prefHeight="35.0" prefWidth="269.0" text="Please choose a table:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="66.0" prefHeight="35.0" prefWidth="232.0" text="(smoking area)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="table3persons" layoutX="91.0" layoutY="309.0" prefHeight="17.0" prefWidth="68.0" />
+      <Button fx:id="table5" layoutX="388.0" layoutY="122.0" mnemonicParsing="false" onAction="#reserveTable5" prefHeight="63.0" prefWidth="136.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="table5persons" layoutX="428.0" layoutY="163.0" prefHeight="17.0" prefWidth="68.0" />
+      <Button fx:id="table6" layoutX="387.0" layoutY="197.0" mnemonicParsing="false" onAction="#reserveTable6" prefHeight="57.0" prefWidth="136.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="table6persons" layoutX="428.0" layoutY="231.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label fx:id="table7persons" layoutX="428.0" layoutY="301.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label layoutX="16.0" layoutY="393.0" prefHeight="35.0" prefWidth="340.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="table8persons" layoutX="428.0" layoutY="373.0" prefHeight="24.0" prefWidth="68.0" />
+      <Button layoutX="526.0" layoutY="428.0" mnemonicParsing="false" onAction="#nextscreen" prefHeight="35.0" prefWidth="117.0" text="continue">
+         <font>
+            <Font name="Bauhaus 93" size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="helloname" layoutX="166.0" layoutY="4.0" prefHeight="28.0" prefWidth="444.0" textFill="#1237ee">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="unselected" layoutX="409.0" layoutY="428.0" mnemonicParsing="false" onAction="#unselect" prefHeight="37.0" prefWidth="106.0" text="unselect">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="19.0" layoutY="428.0" mnemonicParsing="false" onAction="#goback" prefHeight="37.0" prefWidth="83.0" text="back">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="table4" layoutX="58.0" layoutY="342.0" mnemonicParsing="false" onAction="#reserveTable4" prefHeight="57.0" prefWidth="117.0" visible="false">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font></Button>
+      <Label fx:id="table4persons" layoutX="91.0" layoutY="376.0" />
+      <Label fx:id="verify" layoutX="20.0" layoutY="376.0" prefHeight="17.0" prefWidth="269.0" text="No table selected, please choose a table" textFill="#e80909" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fake" layoutX="212.0" layoutY="438.0" visible="false" />
+   </children>
+</AnchorPane>

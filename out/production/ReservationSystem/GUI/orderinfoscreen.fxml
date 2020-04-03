@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="558.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.OrderinfoscreenController">
+   <children>
+      <Button fx:id="logout" layoutX="415.0" layoutY="500.0" mnemonicParsing="false" onAction="#loggedout" prefHeight="44.0" prefWidth="80.0" text="log out">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="517.0" layoutY="500.0" mnemonicParsing="false" onAction="#quit" prefHeight="44.0" prefWidth="68.0" text="Exit">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="116.0" prefHeight="44.0" prefWidth="362.0" text="Thanks for making your order!" textFill="#12e563">
+         <font>
+            <Font name="Bauhaus 93" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="52.0" prefHeight="17.0" prefWidth="172.0" text="Your order:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="413.0" prefHeight="17.0" prefWidth="172.0" text="Total price:">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="order" layoutX="195.0" layoutY="88.0" prefHeight="317.0" prefWidth="348.0" textFill="#1342cf">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalprice" layoutX="336.0" layoutY="413.0" prefHeight="35.0" prefWidth="172.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <Label layoutX="210.0" layoutY="448.0" prefHeight="17.0" prefWidth="94.0" text="(including taxes)" />
+   </children>
+</AnchorPane>
