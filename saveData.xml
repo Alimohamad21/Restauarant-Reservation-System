@@ -1,31 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<reservations>
-    <orders>
-        <order>
-            <name></name>
-            <table>0</table>
-            <dishes></dishes>
-            <price>0.0</price>
-        </order>
-        <order>
-            <name>Ali Mohamed</name>
-            <table>5</table>
-            <dishes>4x Greek Salade
-                4x Nuggets
-                3x Fried Potatos
-                4x Apple Pie
-                2x Chocolate Cake
-                5x Fatta Crispy
-                3x Mushroom Soup
-            </dishes>
-            <price>1300.75</price>
-        </order>
-        <order>
-            <name>khaled</name>
-            <table>2</table>
-            <dishes>50x Fatta Crispy
-            </dishes>
-            <price>2587.5</price>
-        </order>
-    </orders>
-</reservations>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name></name><table>0</table><dishes></dishes><price>0.0</price></order><order><name>John Doe</name><table>2</table><dishes>12x Fried Chicken
+5x Apple Pie
+11x Fatta Crispy
+</dishes><price>1904.25</price></order><order><name>Akkad</name><table>6</table><dishes>7x Grilled Chicken
+7x Pizza
+7x Fried Chicken
+7x Greek Salade
+7x Nuggets
+7x Fried Potatos
+7x Apple Pie
+7x Chocolate Cake
+7x Molten Cake
+7x Fatta Crispy
+7x Mushroom Soup
+7x Beef Steak
+</dishes><price>5575.5</price></order></orders></reservations>

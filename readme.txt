@@ -57,7 +57,7 @@ restaurant.
 -Delete reservations feature for the manager.
 
 -In general we split most of the work in half so that we both contributed to everything.
-
+-Note:use cmd commant java -jar JAR-NAME.jar to run jar file
 
 
 
