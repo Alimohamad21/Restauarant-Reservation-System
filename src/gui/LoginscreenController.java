@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import fileHandling.FRestaurant;
 import fileHandling.FUser;
