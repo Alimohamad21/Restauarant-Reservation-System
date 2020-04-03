@@ -41,8 +41,8 @@ restaurant.
 
 
 -Analyzed the design process.
--logic.Customer classes and Controllers.
--logic.Manager class and Controller.
+-Customer classes and Controllers.
+-Manager class and Controller.
 -Sign up feature.
 -appending to reservations file and dealing with it's data.
 -logic for calculating.
@@ -52,8 +52,8 @@ restaurant.
 
 -Created the UML diagram.
 -File handling.
--logic.Waiter class and Controller.
--logic.Cook class and Controller.
+-Waiter class and Controller.
+-Cook class and Controller.
 -Delete reservations feature for the manager.
 
 -In general we split most of the work in half so that we both contributed to everything.
