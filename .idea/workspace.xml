@@ -8,32 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc53cbb-272a-408e-a230-c764a83f43bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputData.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inputData.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saveData.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saveData.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EmployeescreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmployeescreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FDish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FDishes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FDishes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FReservations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FReservations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FTables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUIfunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUIfunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginscreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginscreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderinfoscreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderinfoscreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OrderscreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OrderscreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SignupscreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SignupscreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TableScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TableScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Waiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Waiter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,25 +155,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585511949396" />
-    <state width="1237" height="200" key="GridCell.Tab.0.bottom" timestamp="1585923918760">
+    <state width="1237" height="200" key="GridCell.Tab.0.bottom" timestamp="1585934806666">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585923918760" />
+    <state width="1237" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585934806666" />
     <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584831579688" />
-    <state width="1237" height="200" key="GridCell.Tab.0.center" timestamp="1585923918760">
+    <state width="1237" height="200" key="GridCell.Tab.0.center" timestamp="1585934806665">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585923918760" />
+    <state width="1237" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585934806665" />
     <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584831579688" />
-    <state width="1237" height="200" key="GridCell.Tab.0.left" timestamp="1585923918760">
+    <state width="1237" height="200" key="GridCell.Tab.0.left" timestamp="1585934806665">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585923918760" />
+    <state width="1237" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585934806665" />
     <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584831579688" />
-    <state width="1237" height="200" key="GridCell.Tab.0.right" timestamp="1585923918760">
+    <state width="1237" height="200" key="GridCell.Tab.0.right" timestamp="1585934806666">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585923918760" />
+    <state width="1237" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585934806666" />
     <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584831579688" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1585712988794">
       <screen x="0" y="0" width="1280" height="680" />
