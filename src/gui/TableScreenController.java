@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
@@ -89,11 +90,7 @@ public class TableScreenController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       /*BackgroundImage myBI= new BackgroundImage(new Image("https://besthqwallpapers.com/Uploads/5-8-2019/100501/thumb2-light-wood-texture-wood-light-background-texture-of-natural-materials-wood.jpg",600,700,false,true),
-               BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-               BackgroundSize.DEFAULT);*/
-//then you set to your node
-        // main.setBackground(new Background(myBI));int i;
+
         nonSmokingTables.add(table1);
         nonSmokingTables.add(table2);
         nonSmokingTables.add(table3);

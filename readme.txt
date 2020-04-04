@@ -5,6 +5,8 @@
 -You are allowed to create as many users as you want through the sign up option , but You can't choose a username that has already been taken,We also
 validated the required fields to some degree,Then the account info is added to the input xml file in our system.
 
+-IMPORTANT:If an employee is trying to sign up,he must enter the restaurant employees code which is:1072000. 
+
 -Now back to the log in menu,You need to enter the correct username, password and also select your role in order to proceed to the next screen.
 
 -If you are a customer,You will proceed to the next screen that welcomes you with your name in which you can choose a table.

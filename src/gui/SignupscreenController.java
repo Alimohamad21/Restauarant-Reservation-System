@@ -13,6 +13,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
+
 import logic.*;
 
 
@@ -34,23 +35,34 @@ public class SignupscreenController {
     @FXML
     Label verifyusername;
     private String role = "";
+    @FXML
+    TextField pinCode;
+    @FXML
+    Label forEmployees;
+    private String employeesPinCode = "1072000";
 
     public void setCustomer(ActionEvent event) {
         waiter.setSelected(false);
         cook.setSelected(false);
         role = "Client";
+        pinCode.setVisible(false);
+        forEmployees.setVisible(false);
     }
 
     public void setWaiter(ActionEvent event) {
         customer.setSelected(false);
         cook.setSelected(false);
-        role = "logic.Waiter";
+        role = "Waiter";
+        pinCode.setVisible(true);
+        forEmployees.setVisible(true);
     }
 
     public void setCook(ActionEvent event) {
         waiter.setSelected(false);
         customer.setSelected(false);
         role = "Cooker";
+        pinCode.setVisible(true);
+        forEmployees.setVisible(true);
     }
 
     public void setSignup(ActionEvent event) throws JAXBException {
@@ -71,7 +83,10 @@ public class SignupscreenController {
             }
         }
 
-        if (password.getText().length() >= 5 && username.getText().length() >= 3 && name.getText().length() >= 3 && !role.equals("") && !flag) {
+        if (role.equalsIgnoreCase("Client") && password.getText().length() >= 5 && username.getText().length() >= 3 && name.getText().length() >= 3 && !role.equals("") && !flag) {
+            user.signUp(name.getText(), username.getText(), password.getText(), role);
+            guifunctions.switchScene(event, "loginscreen.fxml");
+        } else if (pinCode.getText().equalsIgnoreCase(employeesPinCode) && password.getText().length() >= 5 && username.getText().length() >= 3 && name.getText().length() >= 3 && !role.equals("") && !flag) {
             user.signUp(name.getText(), username.getText(), password.getText(), role);
             guifunctions.switchScene(event, "loginscreen.fxml");
         } else if (!flag)

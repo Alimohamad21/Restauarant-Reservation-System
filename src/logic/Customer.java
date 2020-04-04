@@ -31,7 +31,6 @@ public class Customer {
             for (FOrder order1 : reservations.getFOrders().getFOrders())
                 orderList.add(order1);
         } catch (Exception e) {
-
         }
         forder.setName(name);
         forder.setTableNumber(tableNumber);
