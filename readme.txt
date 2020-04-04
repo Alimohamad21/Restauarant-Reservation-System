@@ -35,7 +35,7 @@ of your order(ordered dishes,total price of the order).
 restaurant.
 
 -We have also added some features to the manager like clearing all reservations and removing a certain reservation at a table
-(Warning:You need to double click the confirm button in order to see the changes after removing a certain reservation).
+(WARNING:You need to double click the confirm button in order to see the changes after removing a certain reservation).
 
 -Division of labour:
 

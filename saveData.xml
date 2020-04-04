@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<reservations>
-    <orders>
-        <order>
-            <name></name>
-            <table>0</table>
-            <dishes></dishes>
-            <price>0.0</price>
-        </order>
-        <order>
-            <name>Ali Mohamed</name>
-            <table>5</table>
-            <dishes>2x Pizza
-                3x Fried Chicken
-                3x Fatta Crispy
-            </dishes>
-            <price>586.5</price>
-        </order>
-    </orders>
-</reservations>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name>Ali Mohamed</name><table>2</table><dishes>3x Pizza
+1x Fried Chicken
+9x Fatta Crispy
+</dishes><price>810.75</price></order></orders></reservations>
