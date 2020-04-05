@@ -39,6 +39,6 @@ public class Customer {
         orderList.add(forder);
         forders.setFOrders(orderList);
         reservation.setFOrders(forders);
-        marshaller.marshal(reservation, new File("saveData.xml"));
+        marshaller.marshal(reservation,file);
     }
 }

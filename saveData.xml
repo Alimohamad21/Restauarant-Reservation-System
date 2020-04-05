@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name>Ali Mohamed</name><table>2</table><dishes>3x Pizza
-1x Fried Chicken
-9x Fatta Crispy
-</dishes><price>810.75</price></order></orders></reservations>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><reservations><orders><order><name></name><table>0</table><dishes></dishes><price>0.0</price></order><order><name>John Doe</name><table>2</table><dishes>3x Fried Chicken
+2x Fried Potatos
+1x Apple Pie
+6x Mushroom Soup
+</dishes><price>798.75</price></order><order><name>Ali Mohamed</name><table>5</table><dishes>4x Grilled Chicken
+4x Pizza
+4x Fried Chicken
+2x Nuggets
+1x Fried Potatos
+3x Apple Pie
+</dishes><price>1347.0</price></order></orders></reservations>

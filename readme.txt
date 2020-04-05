@@ -61,6 +61,12 @@ restaurant.
 -In general we split most of the work in half so that we both contributed to everything.
 -Note:use cmd commant java -jar JAR-NAME.jar to run jar file
 
+-Important note:We know that we could've used drop down menus and combo boxes to include unlimited number of dishes and tables,But it would've 
+restricted our creativity within the program and we think this is a better way which is also better looking because the initial file doesn't have 
+alot of dishes or tables anyway,and again we could've easily added more tables and dishes but it wasn't necessary since the content of the file
+isn't huge,and we've shown that we indeed can use combo boxes in the delete reservation option in the manager screen.
+
+
 
 
 
