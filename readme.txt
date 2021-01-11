@@ -59,7 +59,7 @@ restaurant.
 -Delete reservations feature for the manager.
 
 -In general we split most of the work in half so that we both contributed to everything.
--Note:use cmd commant java -jar JAR-NAME.jar to run jar file
+-Note:use cmd command java -jar JAR-NAME.jar to run jar file
 
 -Important note:We know that we could've used drop down menus and combo boxes to include unlimited number of dishes and tables,But it would've 
 restricted our creativity within the program and we think this is a better way which is also better looking because the initial file doesn't have 
