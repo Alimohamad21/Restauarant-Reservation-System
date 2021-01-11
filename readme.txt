@@ -1,6 +1,6 @@
 -Our restaurant reservation system is a very user friendly,efficient and good looking system.
 
--Firstly,You are opted to log in with your account, if you have one already, we also added the sign in option If you don't already have an account.
+-Firstly,You are opted to log in with your account, if you have one already, we also added the sign up option If you don't already have an account.
 
 -You are allowed to create as many users as you want through the sign up option , but You can't choose a username that has already been taken,We also
 validated the required fields to some degree,Then the account info is added to the input xml file in our system.
